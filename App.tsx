@@ -43,7 +43,7 @@ const App: React.FC = () => {
 
   return (
     <div className="animated-gradient text-stone-800 min-h-screen overflow-x-hidden relative">
-      <Snowfall />
+      {/* <Snowfall /> */}
       <Sparkle />
       
       {/* Floating Christmas Trees with parallax - Optimized with CSS variables */}
@@ -93,24 +93,46 @@ const App: React.FC = () => {
 
         <Section title="Thông Tin Chi Tiết">
           <div className="grid md:grid-cols-3 gap-8 text-center">
-            <IconListItem icon={<CalendarIcon />} text={DETAILS.date} />
-            <IconListItem icon={<ClockIcon />} text={DETAILS.time} />
-            <IconListItem icon={<LocationMarkerIcon />} text={DETAILS.location} />
+            <IconListItem 
+              image="https://images.unsplash.com/photo-1482517967863-00e15c9b44be?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3" 
+              text={DETAILS.date}
+              animationDelay={0}
+            />
+            <IconListItem 
+              image="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3" 
+              text={DETAILS.time}
+              animationDelay={100}
+            />
+            <IconListItem 
+              image="https://images.unsplash.com/photo-1481833761820-0509d3217039?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3" 
+              text={DETAILS.location}
+              animationDelay={200}
+            />
           </div>
         </Section>
 
         <Section title="Hoạt Động Vui Vẻ">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {ACTIVITIES.map((activity) => (
-              <IconListItem key={activity.text} icon={activity.icon} text={activity.text} />
+            {ACTIVITIES.map((activity, index) => (
+              <IconListItem 
+                key={activity.text} 
+                image={activity.image} 
+                text={activity.text}
+                animationDelay={index * 150}
+              />
             ))}
           </div>
         </Section>
         
         <Section title="Những Gì Cần Mang Theo">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {WHAT_TO_BRING.map((item) => (
-              <IconListItem key={item.text} icon={item.icon} text={item.text} />
+            {WHAT_TO_BRING.map((item, index) => (
+              <IconListItem 
+                key={item.text} 
+                image={item.image} 
+                text={item.text}
+                animationDelay={index * 150}
+              />
             ))}
           </div>
         </Section>

@@ -106,15 +106,37 @@ export const FairyLights = () => {
     );
 };
 
+// Christmas images từ Unsplash - Hình ảnh Giáng sinh phù hợp
 export const ACTIVITIES = [
-  { icon: <MovieIcon />, text: 'Xem Phim Giáng Sinh' },
-  { icon: <CookieIcon />, text: 'Cuộc Thi Trang Trí Bánh Quy' },
-  { icon: <GiftIcon />, text: 'Trao Đổi Quà Secret Santa' },
+  { 
+    image: 'https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3', 
+    text: 'Xem Phim Giáng Sinh' 
+  },
+  { 
+    image: 'https://images.unsplash.com/photo-1519869325930-2817931507c7?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3', 
+    text: 'Cuộc Thi Trang Trí Bánh Quy' 
+  },
+  { 
+    image: 'https://images.unsplash.com/photo-1512389142860-9c449e58a543?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3', 
+    text: 'Trao Đổi Quà Secret Santa' 
+  },
 ];
 
 export const WHAT_TO_BRING = [
-  { icon: <PajamasIcon />, text: 'Bộ Pijama Ấm Áp Nhất' },
-  { icon: <SleepingBagIcon />, text: 'Túi Ngủ & Gối' },
-  { icon: <ToothbrushIcon />, text: 'Bàn Chải Đánh Răng & Đồ Dùng Cá Nhân' },
-  { icon: <GiftIcon />, text: 'Một món quà nhỏ (giới hạn 15$) cho Secret Santa' },
+  { 
+    image: 'https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3', 
+    text: 'Bộ Pijama Ấm Áp Nhất' 
+  },
+  { 
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3', 
+    text: 'Túi Ngủ & Gối' 
+  },
+  { 
+    image: 'https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3', 
+    text: 'Bàn Chải Đánh Răng & Đồ Dùng Cá Nhân' 
+  },
+  { 
+    image: 'https://images.unsplash.com/photo-1512389142860-9c449e58a543?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3', 
+    text: 'Một món quà nhỏ (giới hạn 15$) cho Secret Santa' 
+  },
 ];

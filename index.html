@@ -269,6 +269,103 @@
         will-change: opacity, transform;
         transform: translateZ(0);
       }
+
+      /* Image animations for IconListItem */
+      @keyframes image-fade-in {
+        0% {
+          opacity: 0;
+          transform: scale(0.3) rotate(-20deg);
+          filter: blur(10px);
+        }
+        50% {
+          transform: scale(1.15) rotate(8deg);
+          filter: blur(2px);
+        }
+        100% {
+          opacity: 1;
+          transform: scale(1) rotate(0deg);
+          filter: blur(0px);
+        }
+      }
+
+      @keyframes image-zoom-in {
+        0% {
+          opacity: 0;
+          transform: scale(0.8);
+        }
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      @keyframes image-slide-up {
+        0% {
+          opacity: 0;
+          transform: translateY(30px) scale(0.9);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+      }
+
+      @keyframes text-fade-in {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes pulse-ring {
+        0% {
+          transform: scale(1);
+          opacity: 1;
+        }
+        50% {
+          transform: scale(1.2);
+          opacity: 0.7;
+        }
+        100% {
+          transform: scale(1.4);
+          opacity: 0;
+        }
+      }
+
+      .animate-image-in {
+        animation: image-fade-in 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+      }
+
+      .animate-text-in {
+        animation: text-fade-in 0.8s ease-out forwards;
+        animation-delay: 0.4s;
+      }
+
+      .animate-pulse-ring {
+        animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+      }
+
+      /* Hover animations for images */
+      .icon-list-item img {
+        transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+        will-change: transform;
+      }
+
+      .icon-list-item:hover img {
+        transform: scale(1.2) rotate(8deg);
+        box-shadow: 0 15px 40px rgba(220, 38, 38, 0.5), 0 0 30px rgba(255, 215, 0, 0.3);
+        filter: brightness(1.1) saturate(1.2);
+      }
+
+      /* Image container optimization */
+      .icon-container {
+        will-change: transform, opacity;
+        transform: translateZ(0);
+      }
     </style>
   <script type="importmap">
 {
